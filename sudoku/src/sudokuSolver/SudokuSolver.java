@@ -30,6 +30,17 @@ package sudokuSolver;
             FileReader rd = new FileReader(args[0]);
 
             // Process each grid in the file
+            System.out.println(System.getProperty("user.dir")+"\\solutions.txt");
+            try 
+            {
+                File f = new File(System.getProperty("user.dir")+"\\solutions.txt");
+                if (f.createNewFile()){
+	        System.out.println("File is created!");
+	      }else{
+	        System.out.println("File already exists.");
+	      }
+            } catch (IOException e) { e.printStackTrace(); }
+            
             while (true) {
                 Grid grid = Grid.create(rd);
                 if (grid == null) {
@@ -39,8 +50,10 @@ package sudokuSolver;
 
                 // Find a solution
                 List<Grid> solutions = solve(grid);
-
+                
                 printSolutions(grid,solutions);
+                
+                
             }
         }
 
