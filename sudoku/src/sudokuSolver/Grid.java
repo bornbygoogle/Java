@@ -195,7 +195,7 @@ public class Grid implements Cloneable {
             if (r%3 == 0) {
                 buf.append("-------------------------\n");
             }
-            for (int c=1; c<5; c++) {
+            for (int c=0; c<9; c++) {
                 if (c%3 == 0) {
                     buf.append("| ");
                 }
