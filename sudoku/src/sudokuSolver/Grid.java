@@ -76,23 +76,23 @@ public class Grid implements Cloneable {
         // Read until all 81 cells are filled
         for (int loc=0; loc<grid.cells.length; ) {
             // Read a character                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-            int ch = rd.read();
+            int character = rd.read();
 
             // -1 is returned if the input stream has no more characters
-            if (ch < 0) {
+            if (character < 0) {
                 // No more characters so return null
                 return null;
             }
-            if (ch == '#') {
+            if (character == '#') {
                 // Skip to end-of-line
-                while (ch >= 0 && ch != '\n' && ch != '\r') {
-                    ch = rd.read();
+                while (character >= 0 && character != '\n' && character != '\r') {
+                    character = rd.read();
                 }
-            } else if (ch >= '1' && ch <= '9') {
+            } else if (character >= '1' && character <= '9') {
                 // A given
-                grid.set(loc, ch-'0');
+                grid.set(loc, character-'0');
                 loc++;
-            } else if (ch == '.' || ch == '0') {
+            } else if (character == '.' || character == '0') {
                 // Empty cell
                 loc++;
             }
