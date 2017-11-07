@@ -97,6 +97,5 @@ package sudokuSolver;
                 System.out.println(solutions.get(i));
             }
             System.out.println();
-            System.out.println();
         }
     }
