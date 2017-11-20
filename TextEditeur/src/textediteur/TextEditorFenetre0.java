@@ -16,14 +16,14 @@ import javax.swing.border.Border;
  *
  * @author bornbygoogle
  */
-public class TextEditorFenetre extends JFrame
+public class TextEditorFenetre0 extends JFrame
 {
     JMenuBar menuBar;
     JMenu menu;
     JMenuItem menuItemNouveau, menuItemOuvrir, menuItemEnregistrer, menuItemEnregistrerSous, menuItemQuitter, menuItemColler, menuItemEffacer, menuItemSelectionnerTout, menuItemCouper, menuItemCopier, menuItemCommentaires, menuItemDroitAuteur, menuItemVersions;
     JTextArea TextZone;
         
-    public TextEditorFenetre()
+    public TextEditorFenetre0()
     {
         super("Éditeur");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);                
@@ -41,8 +41,6 @@ public class TextEditorFenetre extends JFrame
         //menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_1, ActionEvent.ALT_MASK));
         //menuItem.getAccessibleContext().setAccessibleDescription("This doesn't really do anything");
         menu.add(menuItemNouveau);
-        
-        JMenuItem menuItem = new JMenuItem();
         
         menuItemOuvrir = new JMenuItem("Ouvrir ...");
         menu.add(menuItemOuvrir);

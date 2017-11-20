@@ -16,6 +16,6 @@ public class TextEditeur {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        TextEditorFenetre A = new TextEditorFenetre();
+        TextEditorFenetre0 A = new TextEditorFenetre0();
     }   
 }
