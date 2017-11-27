@@ -21,7 +21,7 @@ public class TrainTicket extends JFrame implements ActionListener,ItemListener
     private JComboBox clientList;
     private JOptionPane jop;
     private int typeClient=0;
-    private File fichierCourant = null;    
+    private File fichierCourant = new File("inscription.csv");    
     
     public TrainTicket()
     {
@@ -109,7 +109,6 @@ public class TrainTicket extends JFrame implements ActionListener,ItemListener
             case 2 : prix = (prixHT*0.8) * 1.2;
                 break;
         }
-        System.out.println(prix);
         return prix;
     }
 
@@ -139,22 +138,16 @@ public class TrainTicket extends JFrame implements ActionListener,ItemListener
             }
             else
             {
-                StringBuffer buf = new StringBuffer();
-                try { 
-                    BufferedReader in = new BufferedReader(
-                            new FileReader(fichier) );
-                    while ((ligne = in.readLine()) != null)
-                        buf.append(ligne + (char) '\n');
-                    content = buf.toString();
-                }
-                catch(FileNotFoundException e) {}
-                catch(IOException e) {}
-                //buf.close();
-                System.out.println(content);
-                content = content+textSave;
-                out.write(content);
-            }            
+                out.append(textSave);
+            }
+            JOptionPane.showMessageDialog(null,
+                    "Enregistré !",
+                    "Enregistré !",
+                    JOptionPane.INFORMATION_MESSAGE);
             out.close();
+            txtDroiteHaut.setText("");
+            txtGaucheHaut.setText("");
+            clientList.setSelectedIndex(0);
         }
         catch(FileNotFoundException e) {}
         catch(IOException e) {}
@@ -162,10 +155,9 @@ public class TrainTicket extends JFrame implements ActionListener,ItemListener
 
     private void enregistrerFichier() 
     {
-        if (fichierCourant == null) 
+        if (!(fichierCourant.exists())) 
         {
-            //afficheMessage("Aucun emplacement n'a été spécifié, un fichier nommé \"Nouveau Document Text.txt\" \nsera créé dans le répertoire du projet.", "Information");
-            ecrireFichier( new File("inscription.csv"), false); //Créer un nouveau fichier
+            ecrireFichier(fichierCourant, false); //Créer un nouveau fichier
         }
         else  ecrireFichier(fichierCourant, true); // Ajouter au fichier existant
    }
