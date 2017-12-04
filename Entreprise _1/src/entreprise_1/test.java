@@ -11,12 +11,12 @@ import java.util.Vector;
  *
  * @author faycal
  */
-public class Main0 {
+public class test {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void test(String[] args) {
         // TODO code application logic here
         Horaire a=new Horaire("AAAA", 200);
 	Commercial b=new Commercial ("BBBB",200,5000);
