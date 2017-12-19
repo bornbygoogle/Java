@@ -43,6 +43,12 @@ public class EchangeCaracteresTest {
     {
         assertEquals("BA",echange2DerniersCar("AB"));
     }
+    
+    @Test
+    public void testEchangeChaineAvec4Car()
+    {
+        assertEquals("RANI",echange2DerniersCar("RAIN"));
+    }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //

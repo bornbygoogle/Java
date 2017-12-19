@@ -14,15 +14,19 @@ public class echangeCaracteresClass
     
     public static void main(String[] args) {
         // TODO code application logic here
-        echange2DerniersCar("CD");
+        echange2DerniersCar("RAIN");
     }
     
-    public static String echange2DerniersCar(String chaine2Car)
+    public static String echange2DerniersCar(String chaineCar)
     {
         String maChaine = new String();
-        Integer chaineLength = chaine2Car.length();
-        maChaine = chaine2Car.charAt(chaineLength-1) + "" + chaine2Car.charAt(0);
-        System.out.println(maChaine);
+        String subChaine = new String();        
+        String subChaineEchange = new String();
+        Integer chaineLength = chaineCar.length();
+        subChaineEchange = chaineCar.substring(chaineLength-2,chaineLength);
+        subChaine = chaineCar.substring(0,chaineLength-2);
+        chaineLength = subChaineEchange.length();        
+        maChaine = subChaine + "" + subChaineEchange.charAt(chaineLength-1) + "" + subChaineEchange.charAt(0);
         return maChaine;
     }
 }
