@@ -126,7 +126,7 @@ public class EnvoiInterface extends JFrame implements ActionListener
                             +"Adresse : "+texte_dest.getText()+"\n"
                             +"Confirmer ?"
                     ;
-           //afficheMessage(message, "Récapitulatif");
+
            if (afficheMessage(message, "Récapitulatif")==0){
                String message2 = "Numéro : "+((Courrier)tabcourrier.lastElement()).getNum()+"\n"
                                 +"Prix : "+((Courrier)tabcourrier.lastElement()).calculPrix()+"\n"           
@@ -138,15 +138,6 @@ public class EnvoiInterface extends JFrame implements ActionListener
                JOptionPane.showMessageDialog(null, message2,"Message", JOptionPane.INFORMATION_MESSAGE);
            }
            }
-
-                
-           //String message = "Type : "+tabcourrier.lastElement().getClass().getName()+"\n"/*+"Prénom : "+TF_PRENOM.getText()+"\n"+"Tarif : "+CHOIX_TARIF.getSelectedItem()+"\n"+"A payer : "+((Client)(tabclient.lastElement())).calculPrix()+"\n"+"Confirmer ? "*/;
-
-               /*ecrireFichier(fichier);
-               TF_NOM.setText("");
-               TF_PRENOM.setText("");
-               CHOIX_TARIF.setSelectedIndex(0);
-               TF_APAYER.setText("");*/
             }
         }
     }
