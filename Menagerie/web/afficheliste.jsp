@@ -20,7 +20,7 @@
                 <td>Type</td>
                 <td>Cri</td>
             </tr>
-            <c:forEach var="item" items="${tablesize}">        
+            <c:forEach var="item" items="${table}">        
             <tr>
                 <td>${item.getNom()}</td>
                 <td>${item.getClass().getName()}</td>

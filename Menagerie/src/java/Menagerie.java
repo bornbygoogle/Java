@@ -61,7 +61,7 @@ public class Menagerie extends HttpServlet {
             throws ServletException, IOException 
     {
         int size = tabanimal.size();
-        request.setAttribute("tablesize", tabanimal);
+        request.setAttribute("table", tabanimal);
         request.getRequestDispatcher("afficheliste.jsp").forward(request, response);
     }
 
