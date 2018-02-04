@@ -6,6 +6,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +17,9 @@ import javax.servlet.http.HttpServletResponse;
  * @author bornbygoogle
  */
 public class Menagerie extends HttpServlet {
+    
+    
+    Vector tabanimal=new Vector();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -54,8 +58,11 @@ public class Menagerie extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+            throws ServletException, IOException 
+    {
+        int size = tabanimal.size();
+        request.setAttribute("tablesize", tabanimal);
+        request.getRequestDispatcher("afficheliste.jsp").forward(request, response);
     }
 
     /**
@@ -69,18 +76,25 @@ public class Menagerie extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
-    {
-        request.getRequestDispatcher("/afficheliste.jsp").forward(request, response);
+    {        
+        String animaltype = request.getParameter("animaltype");
+        String animalname = request.getParameter("animalname");
+        switch(animaltype)
+        {
+            case "chien" : 
+                tabanimal.add(new Chien(animalname));
+                break;
+            case "chat" : 
+                tabanimal.add(new Chat(animalname));
+                break;
+            case "oiseau" : 
+                tabanimal.add(new Oiseau(animalname));
+                break;                
+        }
+        animalname = ((Animal)tabanimal.lastElement()).getNom();
+        if (animalname!="") request.setAttribute("saved","alors");
+        request.setAttribute("animalname", animalname);
+        request.setAttribute("animaltype",animaltype);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }
