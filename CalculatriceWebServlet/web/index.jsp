@@ -13,18 +13,21 @@
     </head>
     <body>
         
-        <% if (request.getAttribute("Resultat")=="null" ) request.setAttribute("Resultat",""); %>
+        <% if (request.getAttribute("Resultat")==null)request.setAttribute("Resultat","");
+        if (request.getAttribute("Op1")==null)request.setAttribute("Op1","");
+        if (request.getAttribute("Op2")==null)request.setAttribute("Op2","");
+        %>   
         
          <form name="Calcul" method="POST" action="CalculatriceWebServlet">
-                <input type="text"  name="Op1" value="<% request.getAttribute("Op1"); %>" size="10" /> 
-                <input type="text" name="Op2"  value="<% request.getAttribute("Op2"); %>" size="10" />
+                <input type="text"  name="Op1" value="<%=request.getAttribute("Op1")%>" size="10" /> 
+                <input type="text" name="Op2"  value="<%=request.getAttribute("Op2")%>" size="10" />
         <div>
             <input type="submit" value="+" name="type" />
             <input type="submit" value="-" name="type" />
             <input type="submit" value="*" name="type" />
             <input type="submit" value="/" name="type" />
         </div>
-                        <input type="text" name="Resultat" label="Resulat" value="<% request.getAttribute("Resultat"); %>">
+                        <input type="text" name="Resultat" label="Resulat" value="<%=request.getAttribute("Resultat")%>">
         </form>
 
     </body>
