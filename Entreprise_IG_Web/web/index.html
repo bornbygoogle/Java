@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Entreprise IG Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="Creation" action="Create" method="POST">
+            <label>Nom employé : </label><input type="text" name="Nom" value="" size="10" />
+            <select name="type" size="1" onchange="java_script_:show(this.options[this.selectedIndex].value)">
+                <option value="Fixe">Fixe</option>
+                <option value="Horaire">Horaire</option>
+                <option value="Commercial">Commercial</option>
+            </select>
+            <div id="hiddenDivHoraire" style="display:none">
+                <label>Nombre Heures : </label><input type="text" name="Heure" value="0.0" size="10" />
+            </div>
+            <div id="hiddenDivCommercial" style="display:none">
+                <label>Nombre Heures : </label><input type="text" name="Heure" value="0.0" size="10" />
+                <label>Nombre Ventes : </label><input type="text" name="Vente" value="0.0" size="10" />
+            </div>
+            <input type="submit" value="Créer" name="B_CREAT" />
+            
+        </form>
+        <form name="Liste" action="Liste" method="POST">
+            <input type="submit" value="Afficher la liste" name="Liste"  />
+        </form>
+
+        <script>
+        function show(aval) {
+            if (aval == "Horaire") {
+                hiddenDivHoraire.style.display='inline-block';
+                Form.fileURL.focus();
+            }
+            else{
+                hiddenDivHoraire.style.display='none';
+            }
+            if (aval == "Commercial") {
+                hiddenDivCommercial.style.display='inline-block';
+                Form.fileURL.focus();
+            }
+            else{
+                hiddenDivCommercial.style.display='none';
+            }
+        }
+  </script>
+    </body>
+</html>
