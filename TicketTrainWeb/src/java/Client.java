@@ -13,7 +13,6 @@
 public abstract class Client implements Comparable {
      protected String nom;
      protected String prenom;
-     protected String Prenom;
      protected static int compteur=1;
      protected int numplace;
      protected static final double PRIX_BASE=10;
