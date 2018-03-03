@@ -78,38 +78,21 @@ public class ControlServlet extends HttpServlet {
         //processRequest(request, response);
         AnimalBean animal = new AnimalBean();
         request.setAttribute("monbean", animal);
+        animal.setName(request.getParameter("Nom"));
+        animal.setType(request.getParameter("type"));
+        animal.addAnimal();
         switch(request.getParameter("action"))
         {
             case "Afficher" : 
-                //AfficheBean affiche = new AfficheBean();
-                //request.setAttribute("monbean", affiche);
-            //request.getRequestDispatcher("index.jsp").forward(request,response);
                 request.getRequestDispatcher("affiche.jsp").forward(request,response);
                 break;
             case "Creer" :
-                //CreateBean create = new CreateBean();
-                animal.setName(request.getParameter("Nom"));
-                animal.setType(request.getParameter("type"));
-                animal.addAnimal();
-                request.setAttribute("monbean", animal);
                 request.getRequestDispatcher("creation.jsp").forward(request,response);
                 break;
             default : 
                 request.getRequestDispatcher("form.jsp").forward(request,response);
                 break;
         }
-        /*if (request.getParameter("action").equals("Afficher")) 
-        {
-            AfficheBean a = new AfficheBean();
-            request.setAttribute("monbean", a);
-            //request.getRequestDispatcher("index.jsp").forward(request,response);
-            request.getRequestDispatcher("affiche.jsp").forward(request,response);
-        }
-        else if (request.getParameter("action").equals("Creer")) 
-        {
-            request.getRequestDispatcher("creation.jsp").forward(request,response);
-        }*/
-        
     }
 
     /**
