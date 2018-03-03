@@ -19,7 +19,6 @@
                 <option value="Chat">Chat</option>
                 <option value="Oiseau">Oiseau</option>
             </select>
-            <div><input type="text" name="Resultat" label="A Payer" value="<%=request.getAttribute("Resultat")%>">
             <input type="submit" value="Afficher" name="action" />
             <input type="submit" value="Creer" name="action" />      
         </form>
