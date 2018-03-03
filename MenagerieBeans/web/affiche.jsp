@@ -13,7 +13,9 @@
     </head>
     <body>
         <h1>Affiche</h1>
-        <jsp:useBean id="monbean" class="Menagerie.AfficheBean" scope="request" />
-        <jsp:getProperty name="monbean" property="alea" />
+        <jsp:useBean id="monbean" class="Menagerie.AnimalBean" scope="request" />
+        <jsp:getProperty name="monbean" property="name" />
+        <jsp:getProperty name="monbean" property="type" />
+        <jsp:getProperty name="monbean" property="cri" />
     </body>
 </html>

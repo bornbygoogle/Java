@@ -76,19 +76,22 @@ public class ControlServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
+        AnimalBean animal = new AnimalBean();
+        request.setAttribute("monbean", animal);
         switch(request.getParameter("action"))
         {
             case "Afficher" : 
-                AfficheBean affiche = new AfficheBean();
-                request.setAttribute("monbean", affiche);
+                //AfficheBean affiche = new AfficheBean();
+                //request.setAttribute("monbean", affiche);
             //request.getRequestDispatcher("index.jsp").forward(request,response);
                 request.getRequestDispatcher("affiche.jsp").forward(request,response);
                 break;
             case "Creer" :
-                CreateBean create = new CreateBean();
-                create.setName(request.getParameter("Nom"));
-                create.setType(request.getParameter("type"));
-                request.setAttribute("monbean", create);
+                //CreateBean create = new CreateBean();
+                animal.setName(request.getParameter("Nom"));
+                animal.setType(request.getParameter("type"));
+                animal.addAnimal();
+                request.setAttribute("monbean", animal);
                 request.getRequestDispatcher("creation.jsp").forward(request,response);
                 break;
             default : 

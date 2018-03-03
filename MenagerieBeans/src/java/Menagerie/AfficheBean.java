@@ -17,7 +17,7 @@ public class AfficheBean implements Serializable
     
     private double alea;
     
-    public AfficheBean() { alea = Math.random(); }
+    public AfficheBean() {}
     
     public double getAlea() { return alea; }
     

@@ -17,7 +17,7 @@ import java.util.Vector;
  *
  * @author bornbygoogle
  */
-public class CreateBean implements Serializable{
+public class AnimalBean implements Serializable{
    
     static Vector  tabanimaux=new Vector();
     
@@ -25,7 +25,7 @@ public class CreateBean implements Serializable{
     private String type="";
     private String cri="";
     
-    public CreateBean() { }
+    public AnimalBean() { }
     
     public String getName() { return name; }
     public String getType() { return type; }

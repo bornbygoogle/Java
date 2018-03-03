@@ -13,9 +13,7 @@
     </head>
     <body>
         <h1>Creation</h1>
-        <jsp:useBean id="monbean" class="Menagerie.CreateBean" scope="request" />
-        <jsp:getProperty name="monbean" property="name" />
-        <jsp:getProperty name="monbean" property="type" />
-        <jsp:getProperty name="monbean" property="cri" />
+        <jsp:useBean id="monbean" class="Menagerie.AnimalBean" scope="request" />
+        L'animal <jsp:getProperty name="monbean" property="type" /> nommé <jsp:getProperty name="monbean" property="name" /> est créé !!!       
     </body>
 </html>
