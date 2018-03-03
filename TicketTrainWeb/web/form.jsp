@@ -12,10 +12,14 @@
         <title>Tickets de train de tourisme</title>
     </head>
     <body>
-        <% if (request.getAttribute("Resultat")==null)request.setAttribute("Resultat","");  %>   
+        <% 
+            if (request.getAttribute("Resultat")==null)request.setAttribute("Resultat","");  
+            if (request.getAttribute("Nom")==null)request.setAttribute("Nom","");
+            if (request.getAttribute("Prenom")==null)request.setAttribute("Prenom","");
+        %>   
         <form action="Controller" method="POST">
-            <label>Nom : </label><input type="text" name="Nom" value="" size="10" />
-            <label>Prenom : </label><input type="text" name="Prenom" value="" size="10" />
+            <label>Nom : </label><input type="text" name="Nom" value="<%=request.getAttribute("Nom")%>" size="10" />
+            <label>Prenom : </label><input type="text" name="Prenom" value="<%=request.getAttribute("Prenom")%>" size="10" />
             <select name="type" size="1">
                 <option value="Adulte">Adulte</option>
                 <option value="Enfant">Enfant</option>

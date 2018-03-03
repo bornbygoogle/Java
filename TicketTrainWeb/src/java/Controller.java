@@ -130,6 +130,8 @@ public class Controller extends HttpServlet {
                     }
                 catch(FileNotFoundException e) {}
                 catch(IOException e) {}*/
+                request.setAttribute("Nom", ((Client)tabclient.lastElement()).getNom());
+                request.setAttribute("Prenom", ((Client)tabclient.lastElement()).getPrenom());
                 request.setAttribute("Resultat", ((Client)tabclient.lastElement()).calculPrix());
                 request.getRequestDispatcher("form.jsp").forward(request, response);
             }
