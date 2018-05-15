@@ -28,7 +28,7 @@ public abstract class Personne implements Comparable
         return this.nom;
     }
     
-    public String getType(){return this.getClass().getName();}
+    public String getType(){return this.getClass().getSimpleName();}
     public abstract String toString();
     
     public int compareTo(Object a){

@@ -28,7 +28,8 @@ public class Entraineur extends Personne
 
     @Override
     public String toString(){
-         return "Nom : "+ this.nom
+         return getType()
+                 +" Nom : "+ this.nom
                  +" Prenom : "+this.prenom
                  +" Nationalité : "+this.nationalite
                  +" Club : "+this.club
