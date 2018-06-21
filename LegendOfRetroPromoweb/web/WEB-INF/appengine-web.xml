@@ -3,6 +3,8 @@
 xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 xsi:schemaLocation='http://kenai.com/projects/nbappengine/downloads/download/schema/appengine-web.xsd appengine-web.xsd'>
     <application>inner-precept-195422 </application>
+        <runtime>java8</runtime>
+        <threadsafe>true</threadsafe>
     <version>1</version>
     <!--    <ssl-enabled>false</ssl-enabled>
     <sessions-enabled>true</sessions-enabled>

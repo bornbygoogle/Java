@@ -4,6 +4,8 @@
     Author     : bornbygoogle
 --%>
 
+<%@page import="beans.ProduitBean"%>
+<%@page import="beans.PromoBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -37,7 +39,7 @@
         </button>
 
         <!-- Logo text or image -->
-        <a class="navbar-brand" href="index.html">Legend Of Retro</a>
+        <a class="navbar-brand" href="index.jsp">Legend Of Retro</a>
 
       </div>
       <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
@@ -109,7 +111,7 @@
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- Fonctionalités -->
   <section id="services" class="home-section bg-white">
     <div class="container">
       <div class="row">
@@ -117,7 +119,7 @@
           <div class="section-heading">
             <h2>Fonctionalités d'application SWING</h2>
             <div class="heading-line"></div>
-            <p>Notre projet compose de 3 fonctionnalités principaux : </p>
+            <p>Notre projet compose de 4 fonctionnalités principaux : </p>
           </div>
         </div>
       </div>
@@ -132,7 +134,7 @@
                   <div class="col-sm-12 col-md-offset-1 col-md-6">
                     <div class="wow bounceInLeft">
                       <h4>Gestion des produits</h4>
-                      <p>L'application est capable de recherche un/des Produits ( Consoles ou Jeux ); Elle est capable aussi de créer un/des nouveaux Produits.</p>
+                      <p>L'application est capable de recherche un/des Produits ( Consoles ou Jeux );<br> Elle est capable aussi de créer un/des nouveaux Produits.</p>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-5">
@@ -147,7 +149,7 @@
                   <div class="col-sm-12 col-md-offset-1 col-md-6">
                     <div class="wow bounceInLeft">
                       <h4>Gestion des Clients/Fournisseurs</h4>
-                      <p>L'application est capable de recherche un/des Personnes ( Clients ou Fournisseurs ); Elle est capable aussi de créer un/des nouveaux Personnes.</p>
+                      <p>L'application est capable de recherche un/des Personnes ( Clients ou Fournisseurs );<br> Elle est capable aussi de créer un/des nouveaux Personnes.</p>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-5">
@@ -162,7 +164,7 @@
                   <div class="col-sm-12 col-md-offset-1 col-md-6">
                     <div class="wow bounceInLeft">
                       <h4>Gestion Achat/Vente</h4>
-                      <p>L'application est capable de recherche la disponibilité d'un/des Personnes ( Clients ou Fournisseurs ) et créer à la volée; Elle est capable aussi de créer un/des nouveaux Factures d'achat ou vente.</p>
+                      <p>L'application est capable de recherche la disponibilité d'un/des Personnes ( Clients ou Fournisseurs ) et créer à la volée;<br> Elle est capable aussi de créer un/des nouveaux Factures d'achat ou vente.</p>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-5">
@@ -177,7 +179,7 @@
                   <div class="col-sm-12 col-md-offset-1 col-md-6">
                     <div class="wow bounceInLeft">
                       <h4>Gestion des Promotions</h4>
-                      <p>L'application est capable de calculer la côte d'un produit; permettre aux utilisateurs de modifier la côte en cas besoin. </p>
+                      <p>L'application est capable de calculer la côte d'un produit;<br> Elle permet aux utilisateurs de modifier la côte en cas besoin. </p>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-5">
@@ -202,7 +204,8 @@
     </div>
   </section>
 
-  <!-- Works -->
+
+  <!-- Promotions -->
   <section id="portfolio" class="home-section bg-gray">
     <div class="container">
       <div class="row">
@@ -216,76 +219,75 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-
           <ul id="og-grid" class="og-grid">
-            <li>
-              <a href="#" 
-                 data-largesrc="img/works/1.jpg" 
-                 data-title="Portfolio title" 
-                 data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.">
-		<img src="img/works/thumbs/1.jpg" alt=""/>
-		</a>
-            </li>
-            <li>
-              <a href="#" 
-                 data-largesrc="img/works/2.jpg" 
-                 data-title="Portfolio title" 
-                 data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
-		<img src="img/works/thumbs/2.jpg" alt=""/>
-		</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/3.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
-								<img src="img/works/thumbs/3.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/4.jpg" data-title="Portfolio title" data-description="In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.">
-								<img src="img/works/thumbs/4.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/5.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea">
-								<img src="img/works/thumbs/5.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/6.jpg" data-title="Portfolio title" data-description="Id elit saepe pro. In atomorum constituam definitionem quo, at torquatos sadipscing eum, ut eum wisi meis mentitum. Probo feugiat ea duo. An usu platonem instructior, qui dolores inciderint ad. Te elit essent mea, vim ne atqui legimus invenire, ad dolor vitae sea.">
-								<img src="img/works/thumbs/6.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/7.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei.">
-								<img src="img/works/thumbs/7.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/8.jpg" data-title="Portfolio title" data-description="No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
-								<img src="img/works/thumbs/8.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/9.jpg" data-title="Portfolio title" data-description="Lorem ipsum dolor sit amet, ex pri quod ferri fastidii. Mazim philosophia eum ad, facilisis laboramus te est. Eam magna fabellas ut. Ne vis diceret accumsan salutandi, pro in impedit accusamus dissentias, ut nonumy eloquentiam ius.">
-								<img src="img/works/thumbs/9.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/10.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim.">
-								<img src="img/works/thumbs/10.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/11.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
-								<img src="img/works/thumbs/11.jpg" alt="img01"/>
-							</a>
-            </li>
-            <li>
-              <a href="#" data-largesrc="img/works/12.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
-								<img src="img/works/thumbs/12.jpg" alt="img01"/>
-							</a>
-            </li>
-          </ul>
 
+            <jsp:useBean id="promos" class="beans.PromoBeans" scope="request" /> 
+
+            <%
+                for (PromoBean  promo : promos.getResult()) 
+                {
+                    //out.println("type : "+promo.getType());
+                    /*out.println("Nom : "+e.getNom());
+                    out.println("Prix : "+e.getPrix());*/
+                    out.println("<li>");
+                    if (promo.getIdPromo()==0)
+                    {    
+                        if (promo.getType().equals("Console"))
+                            out.println("<a href=\"#\" "
+                                        + "data-largesrc=\""+""/*e.getPhoto()*/+"\" "
+                                        + "data-title=\"Item Num "+/*e.getIdPromo()*/promo.getIdVersionConsole()+"\" "
+                                        + "data-description=\"CodeBarre : "+promo.getCodeBarre()
+                                                            +"<br>Nom : "+promo.getNom()
+                                                            +"<br>Prix : "+promo.getPrix()
+                                                            +"\">");
+                        else
+                            out.println("<a href=\"#\" "
+                                        + "data-largesrc=\""+""/*e.getPhoto()*/+"\" "
+                                        + "data-title=\"Item Num "+/*e.getIdPromo()*/promo.getIdVersionJeu()+"\" "
+                                        + "data-description=\"CodeBarre : "+promo.getCodeBarre()
+                                                            +"<br>Nom : "+promo.getNom()
+                                                            +"<br>Prix : "+promo.getPrix()
+                                                            +"\">");
+                    }
+                    else
+                        if (promo.getType().equals("Console"))
+                            out.println("<a href=\"#\" "
+                                        + "data-largesrc=\""+""/*e.getPhoto()*/+"\" "
+                                        + "data-title=\"Item Num "+/*e.getIdPromo()*/promo.getIdVersionConsole()+"\" "
+                                        + "data-description=\"CodeBarre : "+promo.getCodeBarre()
+                                                            +"<br>Nom : "+promo.getNom()
+                                                            +"<br>Prix de base : "+promo.getPrixBase()
+                                                            +"<br>Prix : "+promo.getPrix()
+                                                            +"\">");
+                        else
+                            out.println("<a href=\"#\" "
+                                        + "data-largesrc=\""+""/*e.getPhoto()*/+"\" "
+                                        + "data-title=\"Item Num "+/*e.getIdPromo()*/promo.getIdVersionJeu()+"\" "
+                                        + "data-description=\"CodeBarre : "+promo.getCodeBarre()
+                                                            +"<br>Nom : "+promo.getNom()
+                                                            +"<br>Prix de base : "+promo.getPrixBase()
+                                                            +"<br>Prix : "+promo.getPrix()
+                                                            +"\">");
+                    out.println("<img src=\""+promo.getPhoto()+"\" alt=\"img01\"/>");
+                    out.println("</a>");
+                    out.println("</li>");
+                }
+            %>
+            <!--%
+            int i=1;
+            while(i<10) {
+                out.println("<li>");
+                out.println("<a href=\"#\" "
+                            + "data-largesrc=\"img/works/"+i+".jpg\" "
+                            + "data-title=\"Item Num "+i+"\" "
+                            + "data-description=\"Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.\">");
+                out.println("<img src=\"img/works/thumbs/"+i+".jpg\" alt=\"img01\"/>");
+                out.println("</a>");
+                out.println("</li>");
+                i++;
+            }      
+            %-->
+          </ul>
         </div>
       </div>
     </div>
@@ -321,7 +323,7 @@
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
           <div class="box-team wow bounceInUp">
             <img src="img/team/3.jpg" alt="" class="img-circle img-responsive" />
-            <h4>Stephane TEACHER</h4>
+            <h4>Stephane TECHER</h4>
             <p></p>
           </div>
         </div>
